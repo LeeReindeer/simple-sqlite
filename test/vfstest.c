@@ -41,7 +41,7 @@ void testVFS(char **fileLocation) {
     char readBuffer[16];
     // Read 4 bytes from offset 6 and write it into readBuffer
     sqliteOsRead(&fd, &readBuffer, 4);
-    printf("Read from offset: %s\n", readBuffer);
+    printf("Read 4 bytes from offset 6: %s\n", readBuffer);
 
     // Extracted data should be "this"
     assert(strncmp(readBuffer, "this", 4) == 0);
